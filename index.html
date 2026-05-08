@@ -2,18 +2,31 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>STUDIO ZEN | Pilates & Bienestar MDP</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600;800&display=swap');
-        body { background-color: #fcfcf9; color: #444; font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        
+        /* Bloqueo total de márgenes laterales */
+        html, body { 
+            background-color: #fcfcf9; 
+            color: #444; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            scroll-behavior: smooth;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        * { box-sizing: border-box; }
         
         .hero {
             background: linear-gradient(rgba(252, 252, 249, 0.7), rgba(252, 252, 249, 0.8)),
-                url('img/pilates.jpg'); /* Recordá tener tu foto en la carpeta img */
+                url('img/pilates.jpg');
             background-size: cover;
             background-position: center;
             min-height: 85vh;
@@ -34,37 +47,25 @@
         }
 
         .btn-whatsapp {
-            position: fixed; /* Esto lo deja siempre en el mismo lugar */
-            bottom: 25px;    /* Separación del borde de abajo */
-            right: 25px;     /* Separación del borde derecho */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
             background: #25d366;
             color: white;
-            width: 65px;     /* Un poquito más grande para que sea fácil de tocar */
-            height: 65px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 35px;
-            z-index: 10000;  /* Asegura que siempre esté POR ENCIMA de todo */
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra para que resalte */
+            font-size: 28px;
+            z-index: 10000;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
         }
 
-        .btn-whatsapp:hover {
-            transform: scale(1.1); /* Efecto al tocarlo */
-        }
+        .btn-whatsapp:hover { transform: scale(1.1); }
     </style>
-    /* Bloqueo de margen lateral indeseado */
-    html, body {
-        max-width: 100%;
-        overflow-x: hidden;
-        position: relative;
-    }
-
-    * {
-        box-sizing: border-box;
-    }    
 </head>
 <body>
 
@@ -73,20 +74,13 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- MENÚ DE NAVEGACIÓN -->
-    <!-- MENÚ DE NAVEGACIÓN CORREGIDO -->
-<!-- MENÚ DE NAVEGACIÓN OPTIMIZADO PARA MÓVIL -->
-    <!-- MENÚ DE NAVEGACIÓN TOTALMENTE ADAPTABLE -->
-   <!-- MENÚ FINAL ULTRA-COMPACTO -->
-    <nav class="fixed w-full z-[1000] bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm">
+    <!-- MENÚ DE NAVEGACIÓN COMPACTO -->
+    <nav class="fixed w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
         <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col items-center">
-            <!-- Logo más chico para que no empuje el contenido -->
             <h1 class="text-lg font-extrabold tracking-tighter uppercase italic text-gray-800">
                 STUDIO <span class="text-emerald-600">ZEN MDP</span>
             </h1>
-            
-            <!-- Botones en una sola línea bien pegaditos -->
-            <div class="flex justify-center gap-4 text-[9px] font-bold uppercase tracking-widest text-gray-500 mt-1">
+            <div class="flex justify-center gap-4 text-[9px] font-bold uppercase tracking-widest text-gray-400 mt-1">
                 <a href="#inicio" class="hover:text-emerald-600 transition">Inicio</a>
                 <a href="#clases" class="hover:text-emerald-600 transition">Clases</a>
                 <a href="#ubicacion" class="hover:text-emerald-600 transition">Ubicación</a>
@@ -96,54 +90,52 @@
     </nav>
 
     <!-- SECCIÓN DE INICIO (HERO) -->
-   <!-- SECCIÓN DE INICIO (HERO) CORREGIDA -->
-    <header id="inicio" class="hero px-5 pt-20">
-       <h2 class="text-4xl md:text-7xl font-extrabold italic uppercase tracking-tighter mb-4" data-aos="fade-up">
-        ESTÉTICA <br>INTEGRAL
-    </h2>
-        <p class="text-emerald-700 font-bold tracking-[0.3em] uppercase text-xs">
+    <header id="inicio" class="hero px-5 pt-24 overflow-hidden">
+        <h2 class="text-4xl md:text-7xl font-extrabold italic uppercase tracking-tighter mb-4" data-aos="fade-up">
+            ESTÉTICA <br>INTEGRAL
+        </h2>
+        <p class="text-emerald-700 font-bold tracking-[0.3em] uppercase text-[10px] md:text-xs">
             Pilates & Movimiento • Studio Boutique
         </p>
     </header>
 
     <!-- SECCIÓN DE CLASES Y PRECIOS -->
-    <section id="clases" class="max-w-6xl mx-auto px-5 py-24">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div onclick="seleccionarClase('Pilates Reformer')" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 text-center cursor-pointer hover:border-emerald-300 transition">
-                <p class="font-bold uppercase text-xs mb-2 text-emerald-600">Equipamiento</p>
-                <h3 class="text-xl font-bold mb-4">Pilates Reformer</h3>
-                <p class="text-3xl font-black text-gray-800">$20.000</p>
-                <p class="text-[10px] text-gray-400 mt-4 italic">8 sesiones mensuales</p>
+    <section id="clases" class="max-w-6xl mx-auto px-5 py-20">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div onclick="seleccionarClase('Pilates Reformer')" class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center cursor-pointer hover:border-emerald-300 transition">
+                <p class="font-bold uppercase text-[10px] mb-2 text-emerald-600">Equipamiento</p>
+                <h3 class="text-xl font-bold mb-3">Pilates Reformer</h3>
+                <p class="text-2xl font-black text-gray-800">$20.000</p>
+                <p class="text-[9px] text-gray-400 mt-4 italic">8 sesiones mensuales</p>
             </div>
-            <div onclick="seleccionarClase('Pase Libre')" class="bg-emerald-600 p-10 rounded-3xl shadow-xl text-center text-white scale-105 cursor-pointer">
-                <p class="font-bold uppercase text-xs mb-2 opacity-80">Más elegido</p>
-                <h3 class="text-xl font-bold mb-4">Pase Libre</h3>
-                <p class="text-3xl font-black">$35.000</p>
-                <p class="text-[10px] opacity-80 mt-4 italic">Clases ilimitadas</p>
+            <div onclick="seleccionarClase('Pase Libre')" class="bg-emerald-600 p-8 rounded-3xl shadow-xl text-center text-white scale-105 cursor-pointer">
+                <p class="font-bold uppercase text-[10px] mb-2 opacity-80">Más elegido</p>
+                <h3 class="text-xl font-bold mb-3">Pase Libre</h3>
+                <p class="text-2xl font-black">$35.000</p>
+                <p class="text-[9px] opacity-80 mt-4 italic">Clases ilimitadas</p>
             </div>
-            <div onclick="seleccionarClase('Yoga Zen')" class="bg-white p-10 rounded-3xl shadow-sm border border-gray-100 text-center cursor-pointer hover:border-emerald-300 transition">
-                <p class="font-bold uppercase text-xs mb-2 text-emerald-600">Relajación</p>
-                <h3 class="text-xl font-bold mb-4">Yoga Zen</h3>
-                <p class="text-3xl font-black text-gray-800">$18.500</p>
-                <p class="text-[10px] text-gray-400 mt-4 italic">Clases grupales</p>
+            <div onclick="seleccionarClase('Yoga Zen')" class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 text-center cursor-pointer hover:border-emerald-300 transition">
+                <p class="font-bold uppercase text-[10px] mb-2 text-emerald-600">Relajación</p>
+                <h3 class="text-xl font-bold mb-3">Yoga Zen</h3>
+                <p class="text-2xl font-black text-gray-800">$18.500</p>
+                <p class="text-[9px] text-gray-400 mt-4 italic">Clases grupales</p>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO Y RESERVA -->
-    <section id="contacto" class="max-w-4xl mx-auto px-5 py-20">
-        <div class="bg-white p-10 md:p-16 rounded-[40px] shadow-2xl shadow-emerald-100/50 text-center border border-emerald-50">
-            <h3 class="text-3xl font-black mb-4 uppercase italic">Reserva tu Turno</h3>
-            <p class="text-gray-500 mb-10 text-sm">Elegí tu actividad arriba para comenzar.</p>
-            
-            <div class="max-w-md mx-auto space-y-4">
+    <!-- SECCIÓN DE CONTACTO -->
+    <section id="contacto" class="max-w-4xl mx-auto px-5 py-16">
+        <div class="bg-white p-8 md:p-16 rounded-[40px] shadow-2xl shadow-emerald-100/50 text-center border border-emerald-50">
+            <h3 class="text-2xl font-black mb-4 uppercase italic">Reserva tu Turno</h3>
+            <p class="text-gray-500 mb-8 text-xs">Elegí tu actividad arriba para comenzar.</p>
+            <div class="max-w-xs mx-auto space-y-4">
                 <input type="text" id="nombre" placeholder="Nombre y Apellido"
-                    class="w-full bg-gray-50 border border-gray-100 p-5 rounded-2xl outline-none focus:border-emerald-400 transition">
+                    class="w-full bg-gray-50 border border-gray-100 p-4 rounded-xl text-sm outline-none focus:border-emerald-400 transition">
                 <input type="text" id="servicio" readonly
-                    class="w-full bg-emerald-50 p-5 rounded-2xl text-emerald-700 font-bold text-center"
+                    class="w-full bg-emerald-50 p-4 rounded-xl text-emerald-700 font-bold text-center text-sm"
                     placeholder="Actividad seleccionada">
                 <button onclick="enviarWhatsApp()"
-                    class="w-full bg-emerald-600 hover:bg-gray-800 text-white font-black py-5 rounded-2xl uppercase transition duration-500 shadow-lg shadow-emerald-200">
+                    class="w-full bg-emerald-600 hover:bg-gray-800 text-white font-black py-4 rounded-xl uppercase text-sm transition duration-500 shadow-lg">
                     Solicitar Horarios
                 </button>
             </div>
@@ -151,12 +143,10 @@
     </section>
 
     <!-- SECCIÓN DE HORARIOS Y UBICACIÓN -->
-    <section id="ubicacion" class="max-w-6xl mx-auto px-5 py-20">
+    <section id="ubicacion" class="max-w-6xl mx-auto px-5 py-20 bg-gray-50/50">
         <div class="grid md:grid-cols-2 gap-10 items-start">
-            
-            <!-- HORARIOS -->
             <div data-aos="fade-right">
-                <h3 class="text-3xl font-black italic uppercase mb-6">Horarios</h3>
+                <h3 class="text-2xl font-black italic uppercase mb-6">Horarios</h3>
                 <div class="space-y-4">
                     <div class="flex justify-between border-b border-gray-100 pb-2">
                         <span class="font-bold text-gray-600 italic">Lunes a Viernes</span>
@@ -166,33 +156,26 @@
                         <span class="font-bold text-gray-600 italic">Sábados</span>
                         <span class="text-emerald-600 font-bold">09:00 — 13:00</span>
                     </div>
-                    <div class="flex justify-between border-b border-gray-100 pb-2">
-                        <span class="font-bold text-gray-400 italic text-sm">Domingos</span>
-                        <span class="text-gray-400 font-bold text-sm uppercase">Cerrado</span>
-                    </div>
                 </div>
             </div>
-
-            <!-- MAPA -->
             <div data-aos="fade-left">
-                <h3 class="text-3xl font-black italic uppercase mb-6">Ubicación</h3>
+                <h3 class="text-2xl font-black italic uppercase mb-6">Ubicación</h3>
                 <div class="mapa-marco">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100553.79152285!2d-57.6433221!3d-37.9995139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584d94d1d136209%3A0xc30325d038377755!2sMar%20del%20Plata%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1700000000000" 
                         width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- FIRMA PROFESIONAL -->
-    <footer class="py-10 text-center border-t border-gray-50">
+    <footer class="py-10 text-center">
         <p class="text-[10px] font-bold uppercase tracking-widest text-gray-400">Hecho por Ana Mdq Cv</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000 });
+        AOS.init({ duration: 800, once: true });
 
         function seleccionarClase(nombreClase) {
             document.getElementById('servicio').value = nombreClase;
