@@ -55,6 +55,16 @@
             transform: scale(1.1); /* Efecto al tocarlo */
         }
     </style>
+    /* Bloqueo de margen lateral indeseado */
+    html, body {
+        max-width: 100%;
+        overflow-x: hidden;
+        position: relative;
+    }
+
+    * {
+        box-sizing: border-box;
+    }    
 </head>
 <body>
 
