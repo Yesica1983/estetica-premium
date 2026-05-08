@@ -75,16 +75,20 @@
     </a>
 
     <!-- MENÚ DE NAVEGACIÓN COMPACTO -->
+    <!-- MENÚ CON LETRA ADAPTABLE -->
     <nav class="fixed w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col items-center">
-            <h1 class="text-lg font-extrabold tracking-tighter uppercase italic text-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex flex-col items-center">
+            <!-- El logo ahora es más grande en PC (text-2xl) y normal en móvil (text-lg) -->
+            <h1 class="text-lg md:text-2xl font-extrabold tracking-tighter uppercase italic text-gray-800">
                 STUDIO <span class="text-emerald-600">ZEN MDP</span>
             </h1>
-            <div class="flex justify-center gap-4 text-[9px] font-bold uppercase tracking-widest text-gray-400 mt-1">
-                <a href="#inicio" class="hover:text-emerald-600 transition">Inicio</a>
-                <a href="#clases" class="hover:text-emerald-600 transition">Clases</a>
-                <a href="#ubicacion" class="hover:text-emerald-600 transition">Ubicación</a>
-                <a href="#contacto" class="hover:text-emerald-600 transition">Contacto</a>
+            
+            <!-- Los botones ahora tienen un tamaño legible en ambos (text-[10px] en móvil, text-xs en PC) -->
+            <div class="flex justify-center gap-4 md:gap-8 text-[10px] md:text-xs font-bold uppercase tracking-widest text-gray-500 mt-2">
+                <a href="#inicio" class="hover:text-emerald-600 transition p-1">Inicio</a>
+                <a href="#clases" class="hover:text-emerald-600 transition p-1">Clases</a>
+                <a href="#ubicacion" class="hover:text-emerald-600 transition p-1">Ubicación</a>
+                <a href="#contacto" class="hover:text-emerald-600 transition p-1">Contacto</a>
             </div>
         </div>
     </nav>
