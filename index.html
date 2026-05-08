@@ -68,24 +68,23 @@
 <!-- MENÚ DE NAVEGACIÓN OPTIMIZADO PARA MÓVIL -->
     <!-- MENÚ DE NAVEGACIÓN TOTALMENTE ADAPTABLE -->
     <nav class="fixed w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3">
-            <div class="flex flex-col items-center">
-                <!-- LOGO: Siempre centrado y sin cortarse -->
-                <h1 class="text-xl font-extrabold tracking-tighter uppercase italic mb-2">
-                    STUDIO <span class="text-emerald-600">ZEN MDP</span>
-                </h1>
-                
-                <!-- ENLACES: Con espacio para que no se encimen -->
-                <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[10px] font-bold uppercase tracking-[0.2em] text-gray-500">
-                    <a href="#inicio" class="hover:text-emerald-600 transition-colors">Inicio</a>
-                    <a href="#clases" class="hover:text-emerald-600 transition-colors">Clases</a>
-                    <a href="#ubicacion" class="hover:text-emerald-600 transition-colors">Ubicación</a>
-                    <a href="#contacto" class="hover:text-emerald-600 transition-colors">Contacto</a>
-                </div>
+    <div class="max-w-6xl mx-auto px-4 py-2">
+        <!-- Logo centrado en móvil, a la izquierda en PC -->
+        <div class="flex flex-col md:flex-row justify-between items-center">
+            <h1 class="text-lg md:text-2xl font-extrabold tracking-tighter uppercase italic py-1">
+                STUDIO <span class="text-emerald-600">ZEN MDP</span>
+            </h1>
+            
+            <!-- Menú con botones más pequeños y compactos para móvil -->
+            <div class="flex flex-wrap justify-center gap-x-3 gap-y-1 text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-500">
+                <a href="#inicio" class="px-1 hover:text-emerald-600 transition">Inicio</a>
+                <a href="#clases" class="px-1 hover:text-emerald-600 transition">Clases</a>
+                <a href="#ubicacion" class="px-1 hover:text-emerald-600 transition">Ubicación</a>
+                <a href="#contacto" class="px-1 hover:text-emerald-600 transition">Contacto</a>
             </div>
         </div>
-    </nav>
-    </nav>
+    </div>
+</nav>
 
     <!-- SECCIÓN DE INICIO (HERO) -->
    <!-- SECCIÓN DE INICIO (HERO) CORREGIDA -->
